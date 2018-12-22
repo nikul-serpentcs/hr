@@ -7,10 +7,10 @@ from odoo.tests.common import TransactionCase
 class TestNotifyEmployeeManager(TransactionCase):
     def setUp(self):
         super(TestNotifyEmployeeManager, self).setUp()
-        self.hol_model = self.env['hr.holidays']
+        self.hol_model = self.env['hr.leave']
         self.user_model = self.env['res.users']
         self.emp_model = self.env['hr.employee']
-        self.type_model = self.env['hr.holidays.status']
+        self.type_model = self.env['hr.leave.type']
 
         self.user = self.user_model.create({
             'name': 'Test User',
